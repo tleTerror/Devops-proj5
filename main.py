@@ -16,7 +16,7 @@ class PredictRequest(BaseModel):
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the FastAPI AI Deployment API!"}
+    return {"message": "This a minor project to learn devops!"}
 
 @app.post("/predict")
 def predict(request: PredictRequest):
