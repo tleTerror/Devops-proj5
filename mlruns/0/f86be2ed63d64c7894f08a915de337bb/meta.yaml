@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/CODING/DSW/proj5/mlruns/0/f86be2ed63d64c7894f08a915de337bb/artifacts
+end_time: 1743500959528
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f86be2ed63d64c7894f08a915de337bb
+run_name: big-snipe-656
+run_uuid: f86be2ed63d64c7894f08a915de337bb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743500947191
+status: 3
+tags: []
+user_id: Vishal

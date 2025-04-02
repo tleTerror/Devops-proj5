@@ -1,0 +1,43 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main  # or master
+  pull_request:
+    branches:
+      - main  # or master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run tests
+      run: |
+        pytest  # You can add more testing steps here
+
+    - name: Build Docker Image
+      run: |
+        docker build -t myapp .
+
+    - name: Run Docker Container
+      run: |
+        docker run -d -p 8000:8000 myapp
+
+    - name: Deploy (optional)
+      run: |
+        # Add deployment steps here
+        echo "Deployment steps go here"
